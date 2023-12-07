@@ -1,0 +1,114 @@
+/*---------------------------------------/*
+ # SETTINGS
+/*---------------------------------------*/
+$font-family-sans-serif: "Poppins", sans-serif;
+$color-primary: #2eca6a;
+$color-white: #fff;
+$color-black: #000;
+$color-gray: #555555;
+$color-gray-light: #f3f3f3;
+$color-gray-dark: #313131;
+
+/*---------------------------------------/*
+ # GENERIC - BOOTSTRAP
+/*---------------------------------------*/
+@import "bootstrap/scss/bootstrap";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+/*---------------------------------------/*
+ # ELEMENTS
+/*---------------------------------------*/
+
+body {
+  font-family: $font-family-sans-serif;
+  color: $color-gray;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: $color-black;
+}
+
+a {
+  color: $color-black;
+  text-decoration: none;
+  transition: all 0.5s ease;
+  &:hover {
+    color: $color-primary;
+    text-decoration: none;
+  }
+}
+
+/*---------------------------------------/*
+ # OBJECTS
+/*---------------------------------------*/
+
+/*---------------------------------------/*
+ # COMPONENTS
+/*---------------------------------------*/
+
+.c-btn {
+  transition: 0.5s ease;
+  border-radius: 0;
+  padding: 1rem 3rem;
+  letter-spacing: 0.05rem;
+  background-color: $color-primary;
+  color: $color-black;
+  &:hover {
+    background-color: $color-black;
+    color: $color-white;
+  }
+}
+
+.c-map {
+  height: 80vh;
+
+  &__marker {
+    cursor: pointer;
+    width: calc(9.375rem / 4);
+    height: 3.125rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &--1 {
+      background-image: url("../img/apartment.png");
+    }
+
+    &--2 {
+      background-image: url("../img/house.png");
+    }
+  }
+}
+
+.c-filters {
+  display: inline;
+
+  &__item {
+    margin-left: 1.5rem;
+  }
+}
+
+/*---------------------------------------/*
+ # UTILITIES
+/*---------------------------------------*/
+
+.u-color-primary {
+  text-decoration: none;
+  color: $color-black;
+}
+
+.u-color-secondary {
+  color: $color-primary;
+  transition: all 0.5s ease;
+}
+
+.u-color-text {
+  text-decoration: none;
+  color: $color-gray;
+}
+
+.u-hidden {
+  display: none;
+}
